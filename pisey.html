@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+		
+	</script>
+</head>
+<body style="font-size: 40px">
+	<div ng-app="app" ng-controller="all">
+		What is your name? <input type="text" ng-model="name" style="font-size: 40px"><br>
+		How old are you?<input type="number" ng-model="year" style="font-size: 40px"><br>
+		<div>
+			{{"Hello "+name}}<br>	
+			{{"Are you "+year+" old?"}}<br>
+		</div>
+	</div>
+	<script>
+		var app=angular.module("app",[])
+		app.controller("all", function ($scope){
+			$scope.name="Vichea";
+			$scope.year=18;
+		});
+	</script>
+</body>
+</html>
